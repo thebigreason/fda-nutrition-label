@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Nutrition Facts Template</title>
+
+		<meta name="description" content="An accessible HTML template of nutrition facts based on the US FDA Nutrition Facts label for packged foods." />
+		<meta name="viewport" content="width=device-width" />
+
+		<style>
+			.nutrition-facts {
+				border: 2px solid #000;
+				font: 1em/1.5 "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+				margin: auto;
+				max-width: 320px;
+				padding: 0.5em;
+			}
+
+			.nutrition-facts header {
+				border-bottom: 1px solid #000;
+				font-size: 1.75em;
+				line-height: 1.5em;
+			}
+
+			.nutrition-facts h1,
+			.nutrition-facts p {
+				margin: 0;
+			}
+
+			.nutrition-facts h2 {
+				display: none;
+			}
+
+			.nutrition-facts .servings {
+				line-height: 1.25em;
+				padding: 0.25rem 0;
+			}
+
+			.nutrition-facts .calories {
+				border-top: 16px solid #000;
+				border-bottom: 8px solid #000;
+				line-height: 1em;
+				padding: 0.25rem 0;
+			}
+
+			.nutrition-facts .calories td {
+				font-size: 3em;
+			}
+
+			.nutrition-facts .calories .amount {
+				display: block;
+			}
+
+			.nutrition-facts .calories strong {
+				font-size: 2em;
+				display: block;
+				line-height: 1em;
+			}
+
+			.nutrition-facts table {
+				border-collapse: collapse;
+				width: 100%
+			}
+
+			.nutrition-facts th {
+				text-align: left;
+			}
+
+			.nutrition-facts th,
+			.nutrition-facts td {
+				padding: 0;
+			}
+
+			.nutrition-facts th + td {
+				font-weight: bold;
+			}
+
+			.nutrition-facts th[headers] {
+				font-weight: normal;
+				text-indent: 1em;
+			}
+
+			.nutrition-facts th[headers*=' '] {
+				text-indent: 2em;
+			}
+
+			.nutrition-facts th + *,
+			.nutrition-facts th[colspan] {
+				text-align: right;
+			}
+
+			.nutrition-facts .measure {
+				font-weight: normal;
+			}
+
+			.percent-daily-values tr {
+				border-bottom: 1px solid #000;
+			}
+
+			.percent-daily-values tr:nth-child(10) {
+				border-bottom-width: 16px;
+			}
+
+			.percent-daily-values tr:nth-child(n+11) th {
+				font-weight: normal;
+			}
+
+			.percent-daily-values tbody tr:last-child {
+				border-bottom-width: 8px;
+			}
+
+			.nutrition-facts footer {
+				font-size: small;
+				padding: 0.5rem 0 0 0.75rem;
+			}
+
+			.nutrition-facts footer p {
+				text-indent: -0.5rem;
+			}
+		</style>
+
+	</head>
+	<body>
+		<main class="main">
+			<section class="nutrition-facts">
+				<header>
+					<h1>Nutrition Facts</h1>
+				</header>
+				<section class="servings">
+					<h2>Servings</h2>
+					<p>8 servings per container</p>
+					<table>
+						<tr>
+							<th id="serving-size">Serving size</th>
+							<td headers="serving-size">2/3 cup (55g)</td>
+						</tr>
+					</table>
+				</section>
+				<section class="calories">
+					<h2>Calories</h2>
+					<table>
+						<tr>
+							<th id="calories-per-serving"><span class="amount">Amount per serving</span> <strong>Calories</strong></th>
+							<td headers="calories-per-serving">150</td>
+						</tr>
+					</table>
+				</section>
+				<section class="percent-daily-values">
+					<h2>Daily Value Percentages</h2>
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2" id="percent-daily-value">% Daily Value*</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th id="total-fat">Total Fat <span class="measure">8g</span></th>
+								<td headers="percent-daily-value total-fat">10%</td>
+							</tr>
+							<tr>
+								<th id="saturated-fat" headers="total-fat">Saturated Fat <span class="measure">1g</span></th>
+								<td headers="percent-daily-value saturated-fat">5%</td>
+							</tr>
+							<tr>
+								<th id="trans-fat" headers="total-fat"><em>Trans</em> Fat <span class="measure">0g</span></th>
+								<td headers="percent-daily-value trans-fat"></td>
+							</tr>
+							<tr>
+								<th id="cholesterol">Cholesterol <span class="measure">0mg</span></th>
+								<td headers="percent-daily-value cholesterol">0%</td>
+							</tr>
+							<tr>
+								<th id="sodium">Sodium <span class="measure">160mg</span></th>
+								<td headers="percent-daily-value sodium">7%</td>
+							</tr>
+							<tr>
+								<th id="total-carbohydrate">Total Carbohydrate <span class="measure">37g</span></th>
+								<td headers="percent-daily-value total-carbohydrate">13%</td>
+							</tr>
+							<tr>
+								<th id="dietary-fiber" headers="total-carbohydrate">Dietary Fiber <span class="measure">4g</span></th>
+								<td headers="percent-daily-value dietary-fiber">14%</td>
+							</tr>
+							<tr>
+								<th id="total-sugars" headers="total-carbohydrate">Total Sugars <span class="measure">12g</span></th>
+								<td headers="percent-daily-value total-sugars"></td>
+							</tr>
+							<tr>
+								<th id="added-sugars" headers="total-carbohydrate total-sugars" >Includes <span class="measure">10g</span> Added Sugars</th>
+								<td headers="percent-daily-value added-sugars">20%</td>
+							</tr>
+							<tr>
+								<th id="protein">Protein <span class="measure">3g</span></th>
+								<td headers="percent-daily-value protein"></td>
+							</tr>
+							<tr>
+								<th id="vitamin-d">Vitamin D <span class="measure">2mcg</span></th>
+								<td headers="percent-daily-value vitamin-d">10%</td>
+							</tr>
+							<tr>
+								<th id="calcium">Calcium <span class="measure">260mg</span></th>
+								<td headers="percent-daily-value calcium">20%</td>
+							</tr>
+							<tr>
+								<th id="iron">Iron <span class="measure">8mg</span></th>
+								<td headers="percent-daily-value iron">45%</td>
+							</tr>
+							<tr>
+								<th id="potassium">Potassium <span class="measure">235mg</span></th>
+								<td headers="percent-daily-value potassium">6%</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<footer>
+					<p>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition&nbsp;advice.</p>
+				</footer>
+			</section>
+		</main>
+	</body>
+</html>
